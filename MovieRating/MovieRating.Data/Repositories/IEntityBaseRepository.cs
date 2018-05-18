@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Linq.Expressions;
 
-    interface IEntityBaseRepository<T> where T : class, IEntityBase, new()
+   public interface IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {
         IQueryable<T> AllIncluding(params Expression<Func<T, object>>[] includeProperties);
         IQueryable<T> All { get; }
@@ -15,5 +15,6 @@
         void Add(T entity);
         void Delete(T entity);
         void Edit(T entity);
+        
     }
 }
