@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRating.Data", "MovieRa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRating.Services", "MovieRating.Services\MovieRating.Services.csproj", "{BEF64E4E-FBCF-4D72-864D-804666FBA8B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRating.Web", "MovieRating.Web\MovieRating.Web.csproj", "{3AE56B6C-2EE5-46DC-AB26-952F62FEDE95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BEF64E4E-FBCF-4D72-864D-804666FBA8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEF64E4E-FBCF-4D72-864D-804666FBA8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEF64E4E-FBCF-4D72-864D-804666FBA8B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE56B6C-2EE5-46DC-AB26-952F62FEDE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE56B6C-2EE5-46DC-AB26-952F62FEDE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE56B6C-2EE5-46DC-AB26-952F62FEDE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE56B6C-2EE5-46DC-AB26-952F62FEDE95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

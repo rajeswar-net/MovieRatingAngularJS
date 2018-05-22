@@ -3,7 +3,7 @@
     using Entities;
     using System.Collections.Generic;
 
-    interface IMembershipService
+   public interface IMembershipService
     {
         MembershipContext ValidateUser(string userName, string password);
         User CreateUser(string userName, string email, string password, int[] roles);
