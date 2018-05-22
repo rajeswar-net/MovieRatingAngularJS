@@ -8,6 +8,7 @@
     using Data.Infrastructure;
     using Data.Extensions;
     using System.Linq;
+    using System.Security.Principal;
 
     public class MembershipService : IMembershipService
     {
@@ -74,7 +75,17 @@
 
         public MembershipContext ValidateUser(string userName, string password)
         {
-            throw new NotImplementedException();
+            var membershipCtx = new MembershipContext();
+            var user = _userRepository.GetSingleByUsername(userName);
+            if(user!=null && isUserValid(user,password))
+            {
+                var userRoles = GetUserRoles(user.UserName);
+                membershipCtx.User = user;
+
+                var identity = new GenericIdentity(user.UserName);
+                membershipCtx.Principal = new GenericPrincipal(identity, userRoles.Select(x => x.Name).ToArray());
+            }
+            return membershipCtx;
         }
 
         private void addUserToRole(User user, int roleId)
